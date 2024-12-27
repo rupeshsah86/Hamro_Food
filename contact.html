@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="menu.css">
+  <style>
+   
+    main {
+      background-color: #fff;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      font-size: 16px;
+      line-height: 1.5;
+      position: relative; /* Added for positioning the back button */
+    }
+    .contact-container {
+      width: 480px;
+      padding: 40px;
+      background-color: #fff;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      border: 2px solid gold;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .contact{
+      margin-top: 100px;
+    }
+    .contact-container h2 {
+      margin-bottom: 20px;
+      font-size: 26px;
+      color: gold;
+      text-align: center;
+    }
+    .contact-group {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .contact-group label {
+      display: block;
+      font-size: 16px;
+      font-weight: bold;
+      color: #000;
+      margin-bottom: 8px;
+    }
+    .contact-group input,
+    .contact-group textarea {
+      width: 100%;
+      padding: 15px;
+      border: 2px solid #000;
+      border-radius: 8px;
+      font-size: 16px;
+      color: #000;
+      background-color: #fff;
+      transition: border-color 0.3s ease-in-out;
+    }
+    .contact-group input:focus,
+    .contact-group textarea:focus {
+      border-color: gold;
+      outline: none;
+    }
+    .contact-group textarea {
+      resize: none;
+      height: 120px;
+    }
+    .submit-btn {
+      width: 100%;
+      padding: 15px;
+      background-color: gold;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .submit-btn:hover {
+      background-color: #d4af37;
+    }
+    .contact-info {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .contact-info h2 {
+      font-size: 22px;
+      color: gold;
+      margin-bottom: 10px;
+    }
+    .contact-info p {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 8px;
+    }
+    .contact-info a {
+      color: gold;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+    .back-btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+    }
+    .back-btn:hover {
+      background-color: #555;
+    }
+    /* Futuristic popup style */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #333;
+      color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      font-size: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .popup .popup-message {
+      font-size: 24px;
+      color: gold;
+      margin-bottom: 15px;
+    }
+    
+   .active {
+      background: gold;
+      color: black;
+    }
+    
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <img src=" " > Hamro Food
+    </div>
+    <nav>
+        <ul>
+            <li><button onclick="location.href='index.html'">Home</button></li>
+            <li><button onclick="location.href='menu.html'">Menu</button></li>
+            <li><button onclick="location.href='our_special.html'">Our Special</button></li>
+            <li><button id="menuBtn" class="active" onclick="location.href='contact.html'">Contact</button></li>
+        </ul>
+    </nav>
+</header>
+
+  <!-- Contact Information Section -->
+<main>
+  <div class="contact-info">
+    <h2 class="contact">Our Contact Information</h2>
+    <p>📍 Address: New Baneshwar, Kathmandu, Nepal</p>
+    <p>📞 Phone: +977 123 456 789</p>
+    <p>📧 Email: <a href="mailto:usecontact@HamroFood.com">usecontact@HamroFood.com</a></p>
+  </div>
+
+  <!-- Contact Form Section -->
+  <div class="contact-container">
+    <h2>Contact Us</h2>
+    <form id="contactForm" onsubmit="sendMessage(event)">
+      <div class="contact-group">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      </div>
+      <div class="contact-group">
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="contact-group">
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
+      </div>
+      <div class="contact-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Write your message" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </div>
+
+  <!-- Futuristic popup -->
+  <div class="popup" id="popup">
+    <div class="popup-message">Your message has been sent successfully!</div>
+  </div>
+
+  <!-- Back Button -->
+  <button class="back-btn" onclick="window.location.href='index.html'">Back to Home</button>
+
+  <script>
+    // Function to handle form submission
+    function sendMessage(event) {
+      event.preventDefault(); // Prevent form from submitting normally
+
+      // Show popup
+      document.getElementById('popup').style.display = 'block';
+
+      // Redirect after a few seconds (simulate message send delay)
+      setTimeout(function() {
+        window.location.href = 'index.html'; // Redirect to index.html
+      }, 3000); // Wait 3 seconds before redirecting
+    }
+  </script>
+</main>
+</body>
+</html>

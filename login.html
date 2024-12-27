@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and Sign Up</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+    body {
+      background-color: #fff;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .form-container {
+      width: 480px;
+      padding: 40px;
+      background-color: #fff;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid gold;
+      transition: all 0.3s ease-in-out;
+      border-radius: 10px;
+      position: relative;
+    }
+    .form-container h2 {
+      margin-bottom: 30px;
+      font-size: 26px;
+      color: gold;
+      text-align: center;
+    }
+    .form-group {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 16px;
+      font-weight: bold;
+      color: #000;
+      margin-bottom: 8px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 15px;
+      border: 2px solid #000;
+      border-radius: 8px;
+      font-size: 18px;
+      color: #000;
+      background-color: #fff;
+      transition: border-color 0.3s ease-in-out;
+    }
+    .form-group input:focus {
+      border-color: gold;
+      outline: none;
+    }
+    .submit-btn {
+      width: 100%;
+      padding: 15px;
+      background-color: gold;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .submit-btn:hover {
+      background-color: #d4af37;
+    }
+    .sign-up-link, .back-btn {
+      margin-top: 20px;
+      font-size: 16px;
+      color: black;
+      text-align: center;
+      font-weight: bold;
+    }
+    .sign-up-link a, .back-btn a {
+      color: black;
+      text-decoration: none;
+    }
+    .sign-up-link a:hover, .back-btn a:hover {
+      text-decoration: underline;
+    }
+    .food-symbol {
+      position: absolute;
+      font-size: 60px;
+      z-index: 10;
+    }
+    .food-symbol.top {
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Log In Form -->
+  <div class="form-container" id="log-in-form">
+    <div class="food-symbol top">🍔</div>
+    <h2>Log In</h2>
+    <form action="index.html" method="get">
+      <div class="form-group">
+        <label for="login-email">Your Email:</label>
+        <input type="email" id="login-email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="login-password">Password:</label>
+        <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+      </div>
+      <button type="submit" class="submit-btn">Log In</button>
+    </form>
+    <div class="sign-up-link">
+      <p>Don't have an account? <a href="javascript:void(0);" onclick="toggleForms()">Sign Up</a></p>
+    </div>
+    <div class="back-btn">
+      <a href="index.html">← Back to Home</a>
+    </div>
+  </div>
+
+  <!-- Sign Up Form -->
+  <div class="form-container" id="sign-up-form" style="display: none;">
+    <div class="food-symbol top">🍔</div>
+    <h2>Sign Up</h2>
+    <form action="index.html" method="get">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+      </div>
+      <div class="form-group">
+        <label for="sign-up-email">Your Email:</label>
+        <input type="email" id="sign-up-email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Create a password" required>
+      </div>
+      <button type="submit" class="submit-btn">Sign Up</button>
+    </form>
+    <div class="sign-up-link">
+      <p>Already have an account? <a href="javascript:void(0);" onclick="toggleForms()">Log In</a></p>
+    </div>
+    <div class="back-btn">
+      <a href="index.html">← Back to Home</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleForms() {
+      const logInForm = document.getElementById('log-in-form');
+      const signUpForm = document.getElementById('sign-up-form');
+
+      if (logInForm.style.display === 'none') {
+        logInForm.style.display = 'block';
+        signUpForm.style.display = 'none';
+      } else {
+        logInForm.style.display = 'none';
+        signUpForm.style.display = 'block';
+      }
+    }
+  </script>
+
+</body>
+</html>

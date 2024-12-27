@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Hamro Food</title>
+    <link rel="stylesheet" href="menu.css">
+    <style>
+        .active {
+            background: gold;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src=" " > Hamro Food
+        </div>
+        <nav>
+            <ul>
+                <li><button onclick="location.href='index.html'">Home</button></li>
+                <li><button onclick="location.href='menu.html'">Menu</button></li>
+                <li><button id="menuBtn" class="active" onclick="location.href='our_special.html'">Our Special</button></li>
+                <li><button onclick="location.href='contact.html'">Contact</button></li>
+                <li>
+                    <div class="search-bar">
+                        <input type="text" id="searchInput" placeholder="Search food..." />
+                        <button onclick="searchFood()">Search</button>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Filters -->
+    <div class="filters">
+        <button>Nepali Food</button>
+        <button>Ratings 4.0+</button>
+        <button>Pure Veg</button>
+        <button>Rs. 600-Rs. 1000</button>
+        <button>Less than Rs. 500</button>
+    </div>
+
+    <!-- Restaurant Cards -->
+    <div class="restaurants">
+        <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+            <img src="selroti.jpg" alt="selroti">
+            <div class="restaurant-info">
+                <div class="offer">50% OFF UPTO ₹100</div>
+                <h3>Selroti</h3>
+                <p><span class="rating">★ 4.9</span> • 20-30 mins</p>
+                <p>Sweet, deep-fried rice doughnuts.</p>
+            </div>
+        </div>
+
+        <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+            <img src="an.jpg" alt="vegthali">
+            <div class="restaurant-info">
+                <div class="offer">50% OFF UPTO ₹100</div>
+                <h3>Veg thali</h3>
+                <p><span class="rating">★ 4.5</span> • 50-55 mins</p>
+                <p>Sandar veg momo</p>
+            </div>
+        </div>
+
+        <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+            <img src="panipuri.jpg" alt="panipuri">
+            <div class="restaurant-info">
+                <div class="offer">50% OFF UPTO ₹100</div>
+                <h3>Pani Puri</h3>
+                <p><span class="rating">★ 4.5</span> • 50-55 mins</p>
+                <p>Crispy puris with spicy, tangy filling.</p>
+            </div>
+        </div>
+
+        <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+            <img src="chatpate.jpg" alt="chatpate">
+            <div class="restaurant-info">
+                <div class="offer">50% OFF UPTO ₹100</div>
+                <h3>Chatpate</h3>
+                <p><span class="rating">★ 4.5</span> • 50-55 mins</p>
+                <p>Spicy puffed rice mix with lemon and veggies.</p>
+            </div>
+        </div>
+
+        <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+          <img src="fishrice.jpg" alt="fishrice">
+          <div class="restaurant-info">
+              <div class="offer">50% OFF UPTO ₹100</div>
+              <h3>Fish Rice</h3>
+              <p><span class="rating">★ 4.5</span> • 50-55 mins</p>
+              <p>Steamed rice served with flavorful fish curry or fry</p>
+          </div>
+      </div>
+
+
+              <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+                <img src="muttonrice.jpg" alt="muttonrice">
+                <div class="restaurant-info">
+                    <div class="offer">50% OFF UPTO ₹100</div>
+                    <h3>Mutton Rice</h3>
+                    <p><span class="rating">★ 4.5</span> • 50-55 mins</p>
+                    <p>Sandar veg momo</p>
+                </div>
+            </div>
+
+
+            
+        <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+          <img src="rasmalai.jpg" alt="rasmalai">
+          <div class="restaurant-info">
+              <div class="offer">60% OFF UPTO ₹120</div>
+              <h3>Rasmalai</h3>
+              <p><span class="rating">★ 4.8</span> • 50-55 mins</p>
+              <p>Chhena dumplings in flavored milk.</p>
+          </div>
+      </div>
+
+      <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+        <img src="kajubarfi.jpg" alt="kajubarfi">
+        <div class="restaurant-info">
+            <div class="offer">60% OFF UPTO ₹120</div>
+            <h3>Kajubarfi</h3>
+            <p><span class="rating">★ 4.8</span> • 50-55 mins</p>
+            <p>Smooth cashew sweet.</p>
+        </div>
+    </div>
+             
+    <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+        <img src="chandrakhala.jpg" alt="chandrakhala">
+        <div class="restaurant-info">
+            <div class="offer">60% OFF UPTO ₹120</div>
+            <h3>Chandrakhala</h3>
+            <p><span class="rating">★ 4.7</span> • 15-20 mins</p>
+            <p>Crescent-shaped khoya pastry in syrup.</p>
+        </div>
+    </div>
+
+    <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+        <img src="sadapeda.jpg" alt="sadapeda">
+        <div class="restaurant-info">
+            <div class="offer">60% OFF UPTO ₹120</div>
+            <h3>Sadapeda</h3>
+            <p><span class="rating">★ 4.4</span> • 5-10 mins</p>
+            <p> Milk-based khoya sweet with cardamom.</p>
+        </div>
+    </div>
+             
+    <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+        <img src="MothichoorLaddu.jpg" alt="MothichoorLaddu">
+        <div class="restaurant-info">
+            <div class="offer">60% OFF UPTO ₹120</div>
+            <h3>MothichoorLaddu</h3>
+            <p><span class="rating">★ 4.8</span> • 50-55 mins</p>
+            <p>Tiny syrup-soaked flour balls.</p>
+        </div>
+    </div>
+
+    <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+        <img src="chocolatesonpapdi.jpg" alt="chocolatesonpapdi">
+        <div class="restaurant-info">
+            <div class="offer">20% OFF UPTO ₹250</div>
+            <h3>Chocolatesonpapdi</h3>
+            <p><span class="rating">★ 4.3</span> • 5-15 mins</p>
+            <p>Khoya papdi with chocolate.</p>
+        </div>
+    </div>
+    <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+        <img src="mithilathali.jpg" alt="mithilathali">
+        <div class="restaurant-info">
+            <div class="offer">20% OFF UPTO ₹250</div>
+            <h3>Mithilathali</h3>
+            <p><span class="rating">★ 4.3</span> • 5-15 mins</p>
+            <p>A traditional Maithili platter with rice, lentils, vegetable curry, pickles,and desserts.</p>
+        </div>
+    </div>       
+    <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+        <img src="dhindo.jpg" alt="dhindo">
+        <div class="restaurant-info">
+            <div class="offer">60% OFF UPTO ₹120</div>
+            <h3>Dhindo</h3>
+            <p><span class="rating">★ 4.2</span> • 40-45 mins</p>
+            <p>A thick porridge made from buckwheat or millet flour.</p>
+        </div>
+    </div>
+    <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+        <img src="Dahi.jpg" alt="Dahi">
+        <div class="restaurant-info">
+            <div class="offer">60% OFF UPTO ₹120</div>
+            <h3>Dahi</h3>
+            <p><span class="rating">★ 4.2</span> • 40-45 mins</p>
+            <p>Creamy, tangy yogurt.</p>
+        </div>
+    </div>
+        <!-- Add more restaurant cards similarly -->
+         <!-- Search Section -->
+
+    <script src="menu.js"></script>
+    </div>
+</body>
+</html>

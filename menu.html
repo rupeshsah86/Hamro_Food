@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Hamro Food</title>
+    <link rel="stylesheet" href="menu.css">
+    <style>
+        .active {
+            background: gold;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src=" " > Hamro Food
+        </div>
+        <nav>
+            <ul>
+                <li><button onclick="location.href='index.html'">Home</button></li>
+                <li><button id="menuBtn" class="active" onclick="location.href='menu.html'">Menu</button></li>
+                <li><button onclick="location.href='our_special.html'">Our Special</button></li>
+                <li><button onclick="location.href='contact.html'">Contact</button></li>
+                <li>
+                    <div class="search-bar">
+                        <input type="text" id="searchInput" placeholder="Search food..." />
+                        <button onclick="searchFood()">Search</button>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Filters -->
+    <div class="filters">
+        <button>Ratings 4.0+</button>
+        <button>Pure Veg</button>
+        <button>Offers</button>
+        <button>Rs. 300-Rs. 600</button>
+        <button>Less than Rs. 300</button>
+    </div>
+
+    <!-- Restaurant Cards -->
+    <div class="restaurants">
+        <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+            <img src="pestry.jpg" alt="pastry">
+            <div class="restaurant-info">
+                <div class="offer">50% OFF UPTO ₹100</div>
+                <h3>Pastry</h3>
+                <p><span class="rating">★ 4.0</span> • 2-5 mins</p>
+                <p>Flaky, baked dough, sweet or savory, with fillings like fruit, cream, or meat.</p>
+            </div>
+        </div>
+
+        <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+            <img src="cake.jpg" alt="cake">
+            <div class="restaurant-info">
+                <div class="offer">75% OFF UPTO ₹199</div>
+                <h3>Cake</h3>
+                <p><span class="rating">★ 4.0</span> • 30-35 mins</p>
+                <p>A sweet, baked dessert, often frosted or flavored with chocolate, fruit, or vanilla.</p>
+            </div>
+        </div>
+
+        <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+            <img src="vegmomo.jpg" alt="vegmomo">
+            <div class="restaurant-info">
+                <div class="offer">25% OFF UPTO ₹80</div>
+                <h3>Veg momo</h3>
+                <p><span class="rating">★ 4.5</span> • 20-30 mins</p>
+                <p>Steamed dumplings filled with veggies.</p>
+            </div>
+        </div>
+
+        <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+            <img src="frymomo.jpg" alt="frymomo">
+            <div class="restaurant-info">
+                <div class="offer">65% OFF UPTO ₹79</div>
+                <h3>Fry momo</h3>
+                <p><span class="rating">★ 4.3</span> • 15-20 mins</p>
+                <p>Fried Momo is a crispy, deep-fried dumpling filled with meat or veggies.</p>
+            </div>
+        </div>
+
+        <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+            <img src="chillimomo.jpg" alt="chillimomo">
+            <div class="restaurant-info">
+                <div class="offer">50% OFF UPTO ₹98</div>
+                <h3>Chicken chilli momo</h3>
+                <p><span class="rating">★ 4.5</span> • 40-50 mins</p>
+                <p>Fried momos tossed in spicy chili sauce.</p>
+            </div>
+        </div>
+
+        
+        <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+            <img src="burger.jpg" alt="burger">
+            <div class="restaurant-info">
+                <div class="offer">60% OFF UPTO ₹60</div>
+                <h3>Veg Burger</h3>
+                <p><span class="rating">★ 4.2</span> • 50-55 mins</p>
+                <p>Veggie patty in a soft bun.</p>
+            </div>
+        </div>
+
+        <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+            <img src="chickenburger.jpg" alt="Sanju Ka Dhaba">
+            <div class="restaurant-info">
+                <div class="offer">50% OFF UPTO ₹100</div>
+                <h3>Chicken Burger</h3>
+                <p><span class="rating">★ 4.1</span> • 25-30 mins</p>
+                <p>A sandwich with a chicken patty, typically served with veggies and condiments.</p>
+            </div>
+        </div>
+        
+        <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+            <img src="leamon.jpg" alt="leamon">
+            <div class="restaurant-info">
+                <div class="offer">90% OFF UPTO ₹10</div>
+                <h3>Leamon</h3>
+                <p><span class="rating">★ 4.8</span> • 5-10 mins</p>
+                <p>A sour citrus fruit used in cooking, baking, and drinks.</p>
+            </div>
+        </div>
+
+        <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+            <img src="frenchfry.jpg" alt="frenchfry">
+            <div class="restaurant-info">
+                <div class="offer">20% OFF UPTO ₹65</div>
+                <h3>French Fries</h3>
+                <p><span class="rating">★ 4.4</span> • 50-55 mins</p>
+                <p>Deep-fried potato strips, crispy and often served with dips.</p>
+            </div>
+        </div>
+
+        <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+            <img src="pasta.jpg" alt="pasta">
+            <div class="restaurant-info">
+                <div class="offer">60% OFF UPTO ₹80</div>
+                <h3>Pasta</h3>
+                <p><span class="rating">★ 4.5</span> • 30-35 mins</p>
+                <p>Pasta with mixed vegetables. </p>
+            </div>
+        </div>
+
+        <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+            <img src="samosa.jpg" alt="samosa">
+            <div class="restaurant-info">
+                <div class="offer">70% OFF UPTO ₹20</div>
+                <h3>Samosa</h3>
+                <p><span class="rating">★ 4.8</span> • 20-35 mins</p>
+                <p>A deep-fried pastry filled with spiced potatoes, peas, or meat.</p>
+            </div>
+        </div>
+
+        <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+            <img src="coke.jpg" alt="coke">
+            <div class="restaurant-info">
+                <div class="offer">50% OFF UPTO ₹100</div>
+                <h3>Coca-Cola</h3>
+                <p><span class="rating">★ 4.5</span> • 2-3 mins</p>
+                <p>A sweet, carbonated soft drink with a cola flavor.</p>
+            </div>
+        </div>
+
+        <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+            <img src="vegpizza.jpg" alt="vegpizza">
+            <div class="restaurant-info">
+                <div class="offer">50% OFF UPTO ₹100</div>
+                <h3>Veg Pizza</h3>
+                <p><span class="rating">★ 4.0</span> • 50-55 mins</p>
+                <p>Pizza topped with fresh vegetables.</p>
+            </div>
+        </div>
+
+        <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+            <img src="frypaneer.jpg" alt="frypaneer">
+            <div class="restaurant-info">
+                <div class="offer">50% OFF UPTO ₹100</div>
+                <h3>Fry Paneer</h3>
+                <p><span class="rating">★ 4.5</span> • 50-55 mins</p>
+                <p>Indian cheese, fried crispy on the outside, soft inside, often spiced.</p>
+            </div>
+        </div>
+
+        <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+            <img src="matarpaneer.jpg" alt="matarpaneer">
+            <div class="restaurant-info">
+                <div class="offer">50% OFF UPTO ₹110</div>
+                <h3>Matar Paneer</h3>
+                <p><span class="rating">★ 4.2</span> • 40-45 mins</p>
+                <p>A classic dish of paneer cooked with green peas in a spiced curry.</p>
+            </div>
+        </div>
+
+        <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+            <img src="chillipaneer.jpg" alt="chillipaneer">
+            <div class="restaurant-info">
+                <div class="offer">50% OFF UPTO ₹120</div>
+                <h3>Chilli Paneer</h3>
+                <p><span class="rating">★ 4.6</span> • 30-35 mins</p>
+                <p>Deep-fried paneer cubes tossed in a spicy, tangy chili sauce.</p>
+            </div>
+        </div>
+
+        <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+            <img src="vegroll.jpg" alt="vegroll">
+            <div class="restaurant-info">
+                <div class="offer">50% OFF UPTO ₹100</div>
+                <h3>Veg Roll</h3>
+                <p><span class="rating">★ 4.5</span> • 50-55 mins</p>
+                <p>A wrap filled with sautéed vegetables and spices, often served as a snack or light meal.</p>
+            </div>
+        </div>
+
+
+        <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+          <img src="steamegg.jpg" alt="steamegg">
+          <div class="restaurant-info">
+              <div class="offer">50% OFF UPTO ₹100</div>
+              <h3>Steam Egg</h3>
+              <p><span class="rating">★ 4.5</span> • 50-55 mins</p>
+              <p>A smooth, custard-like dish made by steaming a mixture of eggs and broth.</p>
+          </div>
+      </div>
+
+
+      <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+        <img src="stubwarry.jpg" alt="stubwarry">
+        <div class="restaurant-info">
+            <div class="offer">50% OFF UPTO ₹100</div>
+            <h3>Stubwarry</h3>
+            <p><span class="rating">★ 4.5</span> • 50-55 mins</p>
+            <p>A hearty stew or slow-cooked dish made with a variety of meats or vegetables and rich spices.</p>
+        </div>
+      </div>
+
+      <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+        <img src="mountaindew.jpg" alt="mountaindew">
+        <div class="restaurant-info">
+            <div class="offer">40% OFF UPTO ₹120</div>
+            <h3>mountaindew</h3>
+            <p><span class="rating">★ 4.8</span> • 5-10 mins</p>
+            <p>Mountain Dew is a citrus-flavored carbonated soft drink known for its bright yellow color and refreshing,tangy taste.</p>
+        </div>
+      </div>
+      <div class="restaurant-card" onclick="window.location.href='description.html?restaurant=PizzaHut'">
+      <img src="gajarhaluwa.jpg" alt="gajarhaluwa">
+      <div class="restaurant-info">
+          <div class="offer">40% OFF UPTO ₹120</div>
+          <h3>Gajarhaluwa</h3>
+          <p><span class="rating">★ 4.8</span> • 5-10 mins</p>
+          <p>Sweet bottle gourd pudding.</p>
+      </div>
+    </div>
+
+        <!-- Add more restaurant cards similarly -->
+         <!-- Search Section -->
+
+    <script src="menu.js"></script>
+    </div>
+</body>
+</html>

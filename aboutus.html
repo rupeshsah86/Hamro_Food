@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Hamro Food</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background-color: #f8f8f8;
+      color: #333;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 50px 0;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    header h1 {
+      font-size: 48px;
+      color: gold;
+    }
+    header p {
+      font-size: 18px;
+      color: #777;
+      margin-top: 10px;
+    }
+    .about-section {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 60px;
+    }
+    .about-text {
+      width: 48%;
+    }
+    .about-text h2 {
+      font-size: 36px;
+      color: gold;
+      margin-bottom: 20px;
+    }
+    .about-text p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    .about-image {
+      width: 48%;
+    }
+    .about-image img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .mission-section {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .mission-section h2 {
+      font-size: 36px;
+      color: gold;
+    }
+    .mission-section p {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.7;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 50px;
+    }
+    .feature-item {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .feature-item h3 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .feature-item p {
+      font-size: 16px;
+      color: #777;
+    }
+    .creators-section {
+      text-align: center;
+      margin-top: 60px;
+    }
+    .creators-section h2 {
+      font-size: 36px;
+      color: gold;
+      margin-bottom: 30px;
+    }
+    .creators-images {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 30px;
+    }
+    .creator-item {
+      text-align: center;
+    }
+    .creator-item img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 15px;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    footer p {
+      font-size: 16px;
+    }
+    .back-to-home-btn {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+    }
+    .back-to-home-btn button {
+      background-color: gold;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+    }
+    .back-to-home-btn button:hover {
+      background-color: #ffa500;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Header Section -->
+    <header>
+      <h1>About Hamro Food</h1>
+      <p>Your go-to platform for authentic Nepali flavors delivered to your doorstep</p>
+    </header>
+
+    <!-- Back to Home Button -->
+    <div class="back-to-home-btn">
+      <button onclick="window.location.href='index.html'">Back to Home</button>
+    </div>
+
+    <!-- About Section -->
+    <div class="about-section">
+      <div class="about-text">
+        <h2>Who We Are</h2>
+        <p>Hamro Food is a leading food delivery platform in Nepal, dedicated to bringing authentic Nepali cuisine to your doorstep. We aim to offer not just food, but a complete experience of Nepal’s rich culinary heritage.</p>
+        <p>With a focus on tech-driven solutions, we make ordering food quick, easy, and enjoyable. Whether it's a traditional Nepali dish or modern fusion, we ensure that every meal is delivered fresh and hot, with a strong emphasis on quality and safety.</p>
+      </div>
+      <div class="about-image">
+        <img src="https://media.licdn.com/dms/image/v2/D4E22AQE3fQU9B6SI4Q/feedshare-shrink_1280/B4EZQDw_IiHsAk-/0/1735229965366?e=1738195200&v=beta&t=bcrBW8Ts6ekqYKC3sYjJAOqnuKCvcHJH-LFHPx3xHPE" alt="About Hamro Food">
+      </div>
+    </div>
+
+    <!-- Mission Section -->
+    <div class="mission-section">
+      <h2>Our Mission</h2>
+      <p>Our mission is to lead the food delivery industry in Nepal, by offering high-quality, safe, and convenient food options. We use cutting-edge technology to create an experience that’s fast, reliable, and enjoyable, connecting you with your favorite local restaurants and Nepali flavors.</p>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features">
+      <div class="feature-item">
+        <h3>24/7 Customer Support</h3>
+        <p>We provide round-the-clock support to help you with any queries or issues. Your satisfaction is our top priority.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Secure Payment Options</h3>
+        <p>We ensure a secure and seamless payment experience, offering multiple payment options, including cash on delivery and online payments.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Order Tracking</h3>
+        <p>Track your food in real time from the moment it leaves the kitchen until it arrives at your doorstep.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Variety of Cuisines</h3>
+        <p>Enjoy a wide variety of Nepali dishes, ranging from traditional recipes to contemporary creations.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Fast Delivery</h3>
+        <p>We prioritize fast and efficient delivery to ensure your food arrives hot, fresh, and on time.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Safe & Hygienic</h3>
+        <p>Our delivery process ensures that your food is prepared, packed, and delivered with the utmost care and hygiene.</p>
+      </div>
+    </div>
+
+    <!-- Creators Section -->
+    <div class="creators-section">
+      <h2>Meet Our Creators</h2>
+      <div class="creators-images">
+        <div class="creator-item">
+          <img src="https://scontent-tir3-4.xx.fbcdn.net/v/t39.30808-6/327111250_579682090246740_7455002217629806532_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=PSY_pMI-Zg8Q7kNvgHvHkPX&_nc_zt=23&_nc_ht=scontent-tir3-4.xx&_nc_gid=ADVBX8QiIjxgzQYU5mJaMBA&oh=00_AYCnYVIqwWY1nYdqoh1TSZoTS5IHIL3ewRbwsPthPIq5VQ&oe=67736425" alt="Rupesh Kumar Sah">
+          <p>Rupesh Kumar Sah</p>
+        </div>
+        <div class="creator-item">
+          <img src="https://scontent-tir3-4.xx.fbcdn.net/v/t39.30808-6/471603112_570116602480945_5691717025578062893_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=c_M7G4GCWZ0Q7kNvgHLA4XD&_nc_zt=23&_nc_ht=scontent-tir3-4.xx&_nc_gid=AGOzaZgFb_WG1IfgfLofTuR&oh=00_AYAw4CanDCUvTGXHCqJyKj4ttsfz5_i7KVwgnCpJGHvVDg&oe=67741071" alt="Murari Dahal">
+          <p>Murari Dahal</p>
+        </div>
+        <div class="creator-item">
+          <img src="https://scontent-tir3-2.xx.fbcdn.net/v/t39.30808-6/458470713_122106710798498963_2705927792512809697_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=SHIy6h7zPpcQ7kNvgHTcW4A&_nc_zt=23&_nc_ht=scontent-tir3-2.xx&_nc_gid=A0Tz6pYrbbGIrtXVs0vBDti&oh=00_AYCd7Nj31y9eqdzfYIV0brwUMELP0T0p-TBs_r0CBoWnVA&oe=6773E705" alt="Ranjit Shah Kanu">
+          <p>Ranjit Shah Kanu</p>
+        </div>
+        <div class="creator-item">
+          <img src="https://scontent-tir3-3.xx.fbcdn.net/v/t39.30808-6/437850604_401622729330334_3759995818010137936_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=2V_djloWG_EQ7kNvgFzVWTh&_nc_zt=23&_nc_ht=scontent-tir3-3.xx&_nc_gid=ApGX6-s21Gpk9qifPNzUP1d&oh=00_AYD48v_cBbaigUSFpAZatjp7dBEkTS7VcBv7ND68oSzkEw&oe=6773F356" alt="Ravi Kushwaha">
+          <p>Ravi Kushwaha</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 Hamro Food. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

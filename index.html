@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamro Food</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .active {
+            background: gold;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <!-- Navigation Bar -->
+        <header>
+            <div class="logo">Hamro Food</div>
+            <nav>
+                <ul>
+                    <li><button id="menuBtn" class="active" onclick="location.href='index.html'">Home</button></li>
+                    <li><button onclick="location.href='menu.html'">Menu</button></li>
+                    <li><button onclick="location.href='our_special.html'">Our Special</button></li>
+                    <li><button onclick="location.href='contact.html'">Contact</button></li>
+                    <li><button onclick="location.href='aboutus.html'">About Us</button></li>
+                    <li><button class="login-btn" onclick="location.href='login.html'">Login</button></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <h1>Hamro Food: <br> Taste the Tradition</h1>
+            <p>
+                Experience authentic Nepali flavors, from delicious momos to flavorful dal-bhat.
+                Order online or book your table for a dining experience that brings Nepal to your table.
+            </p>
+            <div class="buttons">
+                <button onclick="location.href='menu.html'">Order Now</button>
+                <button onclick="location.href='our_special.html'">Our Special</button>
+            </div>
+        </section>
+    </div>
+    
+</body>
+</html>

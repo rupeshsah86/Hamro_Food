@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Description</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-container {
+            text-align: center;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 8px;
+        }
+
+        .details {
+            margin-top: 20px;
+        }
+
+        .details h1 {
+            font-size: 28px;
+            color: black;
+        }
+
+        .details p {
+            font-size: 16px;
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .buttons button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .add-to-cart {
+            background-color: gold;
+            color: black;
+        }
+
+        .add-to-cart:hover {
+            background-color: #ffcc00;
+        }
+
+        .back {
+            background-color: black;
+            color: white;
+        }
+
+        .back:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>Hamro Food - Item Description</header>
+    <div class="container">
+        <div class="image-container">
+            <img id="foodImage" src="" alt="Food Image">
+        </div>
+        <div class="details">
+            <h1 id="foodName">Food Name</h1>
+            <p id="foodDescription">Food description goes here. This will include details like the ingredients, taste, and more.</p>
+            <p id="foodOffer" style="font-weight: bold; color: green;">Offer: 50% OFF UPTO ₹100</p>
+            <p id="foodRating" style="font-weight: bold;">Rating: ★ 4.5</p>
+        </div>
+        <div class="buttons">
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+            <button class="back" onclick="goBack()">Back</button>
+        </div>
+    </div>
+
+    <script>
+        // Populate data dynamically based on the query string
+        const params = new URLSearchParams(window.location.search);
+        const restaurant = params.get("restaurant");
+
+        const foodDetails = {
+            PizzaHut: {
+                image: "selroti.jpg",
+                name: "Selroti",
+                description: "Sweet, deep-fried rice doughnuts. A popular traditional Nepali snack.",
+                offer: "50% OFF UPTO ₹100",
+                rating: "★ 4.5"
+            },
+            VegThali: {
+                image: "vegthali.jpg",
+                name: "Veg Thali",
+                description: "A complete vegetarian meal with a variety of dishes.",
+                offer: "50% OFF UPTO ₹100",
+                rating: "★ 4.5"
+            },
+            Cake: {
+                image: "cake.jpg",
+                name: "Cake",
+                description: "Delicious cakes made with the finest ingredients.",
+                offer: "50% OFF UPTO ₹100",
+                rating: "★ 4.5"
+            },
+            Dhindo: {
+                image: "dhindo.jpg",
+                name: "Dhindo",
+                description: "A traditional Nepali dish made from buckwheat or millet flour.",
+                offer: "60% OFF UPTO ₹120",
+                rating: "★ 4.8"
+            }
+        };
+
+        if (foodDetails[restaurant]) {
+            document.getElementById("foodImage").src = foodDetails[restaurant].image;
+            document.getElementById("foodName").textContent = foodDetails[restaurant].name;
+            document.getElementById("foodDescription").textContent = foodDetails[restaurant].description;
+            document.getElementById("foodOffer").textContent = `Offer: ${foodDetails[restaurant].offer}`;
+            document.getElementById("foodRating").textContent = `Rating: ${foodDetails[restaurant].rating}`;
+        }
+
+        // Function to simulate adding to cart
+        function addToCart() {
+            alert("Item has been added to your cart!");
+        }
+
+        // Function to go back to the previous page
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
